@@ -1,0 +1,61 @@
+:root {
+    --bg: #020617;
+    --panel: #0f172a;
+    --accent: #3b82f6;
+    --text: #f8fafc;
+    --text-dim: #94a3b8;
+    --weak: #ef4444; /* Rojo para debilidades */
+    --resist: #10b981; /* Verde para resistencias */
+}
+
+body { background-color: var(--bg); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; }
+.header-velvet { text-align: center; padding: 40px; border-bottom: 2px solid var(--accent); }
+.header-velvet h1 { letter-spacing: 5px; color: #bfdbfe; }
+
+.menu-navegacion { display: flex; justify-content: center; background: var(--panel); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #1e3a8a; }
+.btn-nav { background: none; border: none; color: var(--text-dim); padding: 15px 25px; cursor: pointer; font-weight: bold; text-transform: uppercase; }
+.btn-nav.activo { background: var(--accent); color: white; }
+
+.contenedor-principal { max-width: 1200px; margin: 20px auto; padding: 0 20px; min-height: 600px; }
+.panel-filtros { display: flex; gap: 10px; margin-bottom: 20px; background: var(--panel); padding: 15px; border-left: 4px solid var(--accent); }
+.panel-filtros input, .panel-filtros select { padding: 10px; background: var(--bg); color: white; border: 1px solid #1e3a8a; outline: none; flex: 1; }
+
+.grid-display { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.tarjeta { background: var(--panel); border: 1px solid #1e3a8a; padding: 15px; border-left: 4px solid var(--accent); min-height: 220px; }
+
+/* AFINIDADES */
+.afinidades-grid { 
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 5px; 
+    margin-top: 15px;
+    background: rgba(0,0,0,0.3);
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.afin-item { text-align: center; font-size: 0.6rem; font-weight: bold; }
+.afin-val { 
+    display: block; 
+    font-size: 0.75rem; 
+    margin-top: 2px;
+    padding: 2px;
+    border-radius: 2px;
+    background: #1e293b;
+}
+
+.val-wk { color: var(--weak); font-weight: 900; } /* Weak */
+.val-res { color: var(--resist); } /* Resist */
+.val-null { color: #a855f7; } /* Null */
+
+.controles-paginacion { display: flex; justify-content: center; align-items: center; gap: 20px; padding: 40px 0; }
+.btn-pago { background-color: var(--accent); color: white; border: none; padding: 10px 20px; cursor: pointer; }
+.btn-pago:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.footer-velvet { text-align: center; padding: 40px; background: #0b1120; border-top: 2px solid var(--accent); color: var(--text-dim); }
+
+.seccion-app { display: none; }
+.seccion-app.activa { display: block; }
+
+@media (max-width: 900px) { .grid-display { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .grid-display { grid-template-columns: 1fr; } }

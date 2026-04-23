@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P3 Reload | Velvet Compendium</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header-velvet">
+        <h1>THE VELVET ROOM</h1>
+        <p>Base de Datos P3 Reload</p>
+    </header>
+
+    <nav class="menu-navegacion">
+        <button class="btn-nav activo" data-seccion="personas">Personas</button>
+        <button class="btn-nav" data-seccion="habilidades">Habilidades</button>
+        <button class="btn-nav" data-seccion="social-links">Social Links</button>
+    </nav>
+
+    <main class="contenedor-principal">
+        <section id="personas" class="seccion-app activa">
+            <div class="panel-filtros">
+                <input type="text" id="buscador-personas" placeholder="Nombre de Persona...">
+                <select id="filtro-arcano">
+                    <option value="todos">Todos los Arcanos</option>
+                </select>
+                <select id="orden-personas">
+                    <option value="nivel-asc">Nivel: Bajo a Alto</option>
+                    <option value="nivel-desc">Nivel: Alto a Bajo</option>
+                </select>
+            </div>
+            <div id="grid-personas" class="grid-display"></div>
+            <div class="controles-paginacion">
+                <button id="prev-personas" class="btn-pago">Anterior</button>
+                <span id="info-personas" class="texto-pagina">Cargando...</span>
+                <button id="next-personas" class="btn-pago">Siguiente</button>
+            </div>
+        </section>
+
+        <section id="habilidades" class="seccion-app">
+            <div class="panel-filtros">
+                <input type="text" id="buscador-habilidades" placeholder="Nombre de habilidad...">
+                <select id="filtro-tipo-habilidad">
+                    <option value="todos">Todos los Tipos</option>
+                </select>
+            </div>
+            <div id="grid-habilidades" class="grid-display"></div>
+            <div class="controles-paginacion">
+                <button id="prev-habilidades" class="btn-pago">Anterior</button>
+                <span id="info-habilidades" class="texto-pagina">Cargando...</span>
+                <button id="next-habilidades" class="btn-pago">Siguiente</button>
+            </div>
+        </section>
+
+        <section id="social-links" class="seccion-app">
+            <div id="grid-social" class="grid-display"></div>
+            <div class="controles-paginacion">
+                <button id="prev-social" class="btn-pago">Anterior</button>
+                <span id="info-social" class="texto-pagina">Cargando...</span>
+                <button id="next-social" class="btn-pago">Siguiente</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-velvet">
+        <p>&copy; 2026 Velvet Room Compendium - Proyecto Universitario inspirado en Perona 3 Reload</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
